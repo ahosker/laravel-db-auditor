@@ -42,12 +42,17 @@ class Constant
     public const NUMERIC_PATTERN = '/[0-9]+/';
 
     // Datatype List
+    public const MYSQL_DATATYPE_TO_LARAVEL_DATATYPE = [
+        'varchar' => 'string',
+        'int' => 'integer',
+        'bigint' => 'bigInteger',
+        'bool' => 'boolean',
+        'tinyint' => 'tinyInteger',
+        'smallint' => 'smallInteger',
+        'mediumint' => 'mediumInteger',
+    ];
     public const DATATYPE_VARCHAR = 'varchar';
     public const DATATYPE_VARCHAR_SIZE = '255';
-    public const DATATYPE_STRING = 'string';
-    public const DATATYPE_INT = 'int';
-    public const DATATYPE_INTEGER = 'integer';
-
     public const RESTRICT_DATATYPE = [
         'timestamp',
         'date',
@@ -55,7 +60,17 @@ class Constant
         'json',
         'text',
         'longtext',
-        'mediumtext'
+        'mediumtext',
+        'enum',
+        'float',
+        'double',
     ];
+
+    public const QUERY_LOG_FILE_PATH = '/logs/';
+    public const DEFAULT_QUERY_LOG_FILENAME = 'db-audit-queries.log';
+    public const DATE_AND_TIME_FORMAT = 'Y-m-d H:i:s';
+    public const POST = 'POST';
+    public const GET = 'GET';
+    public const SELECT = 'select';
 
 }
